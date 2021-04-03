@@ -1,0 +1,117 @@
+##1. What are the different modes when using VI editor?
+One is the command mode and another is the insert mode. In the command mode, user can move around the file, delete text, etc. In the insert mode, user can insert text.
+
+##2. Which command is used to create multiple directories simultaneously?
+[ec2-user@ip-172-31-35-6 ~]$ mkdir -p dir1 dir2
+[ec2-user@ip-172-31-35-6 ~]$ ls -l
+total 4
+drwxrwxr-x 2 ec2-user ec2-user 6 Apr  3 03:30 dir1
+drwxrwxr-x 2 ec2-user ec2-user 6 Apr  3 03:30 dir2
+-rw-rw-r-- 1 ec2-user ec2-user 0 Mar 29 17:54 file3.txt
+-rw-rw-r-- 1 ec2-user ec2-user 0 Mar 29 17:54 file4.txt
+-rw-rw-r-- 1 ec2-user ec2-user 3 Mar 29 17:51 file5.txt
+
+##3. What is LILO?
+LILO stands for Linux Loader that is used to load Linux into memory. It can boot operating systems from floppy disks, hard disks, and it does not depend on a specific file system. Lilo handles some tasks such as locate the kernel, identify other supporting programs, load memory and starts the kernel.
+
+##4. How cd ~, cd / and cd - are different from each other?
+cd .. cd – (to move one dir up)
+cd / (to move to root)
+cd ~ (to move to the parent directory of the user)
+
+##5. What is a grep command?
+If we want to search for a particular expression inside a file, you can use grep command.
+[ec2-user@ip-172-31-35-6 ~]$ grep "line" file3.txt
+this is first line in file3
+this line is for practice
+this line gives the count
+
+##6. If we are in the directory X and we are running rmdir X being in that directory X. Will this command successfully remove the directory or not?
+No, it will not. 
+[ec2-user@ip-172-31-35-6 ~]$ cd dir1
+[ec2-user@ip-172-31-35-6 dir1]$ rmdir dir1
+
+rmdir: failed to remove ‘dir1’: No such file or directory
+
+##7. What are the contents of /usr/local?
+[ec2-user@ip-172-31-35-6 local]$ pwd
+/usr/local
+[ec2-user@ip-172-31-35-6 local]$ ls -a
+.  ..  bin  etc  games  include  lib  lib64  libexec  sbin  share  src
+
+##8. Which command is used to display the current username?
+[ec2-user@ip-172-31-35-6 local]$ whoami
+ec2-user
+
+##9. What command is used to change your password?
+sudo passwd username
+
+##10. How to find the difference in two configuration files?
+[ec2-user@ip-172-31-35-6 ~]$ diff file3.txt file4.txt
+1,3d0
+< this is first line in file3
+< this line is for practice
+< this line gives the count
+
+##11. How to find where a file is located in Linux?
+[ec2-user@ip-172-31-35-6 ~]$ locate file*
+/home/ec2-user/file3.txt
+/home/ec2-user/file4.txt
+/home/ec2-user/file5.txt
+
+##12. Which command shows the users that are logged in?
+[ec2-user@ip-172-31-35-6 ~]$ w
+ 04:32:45 up 4 days, 12:14,  1 user,  load average: 0.00, 0.00, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+ec2-user pts/2    024-171-017-203. 02:17    0.00s  0.07s  0.00s w
+
+##13. How to forcefully stop a process which is running in the background?
+Use the ps command to get the process id (PID) of the process we want to terminate.
+Issue a kill command for that PID.
+
+##14. Which command is used to list the name of files starting from any particular alphabet or string?
+[ec2-user@ip-172-31-35-6 ~]$ find f*.txt
+file3.txt
+file4.txt
+file5.txt
+
+##15. How to move multiple files of the same extension to a different directory?
+[ec2-user@ip-172-31-35-6 ~]$ ls -l
+total 8
+drwxrwxr-x 2 ec2-user ec2-user  6 Apr  3 03:30 dir2
+-rw-rw-r-- 1 ec2-user ec2-user 80 Apr  3 04:08 file3.txt
+-rw-rw-r-- 1 ec2-user ec2-user  0 Mar 29 17:54 file4.txt
+-rw-rw-r-- 1 ec2-user ec2-user  3 Mar 29 17:51 file5.txt
+[ec2-user@ip-172-31-35-6 ~]$ mv f*.txt /home/ec2-user/dir2
+[ec2-user@ip-172-31-35-6 ~]$ cd dir2
+[ec2-user@ip-172-31-35-6 dir2]$ ls -l
+total 8
+-rw-rw-r-- 1 ec2-user ec2-user 80 Apr  3 04:08 file3.txt
+-rw-rw-r-- 1 ec2-user ec2-user  0 Mar 29 17:54 file4.txt
+-rw-rw-r-- 1 ec2-user ec2-user  3 Mar 29 17:51 file5.txt
+
+##16. What command would you use to check how much memory is being used?
+[ec2-user@ip-172-31-35-6 dir2]$ free
+              total        used        free      shared  buff/cache   available
+Mem:        1006896       96660      389064         400      521172      765624
+Swap:             0           0           0
+
+##17. Which command is used to display the list of content in reverse order?
+[ec2-user@ip-172-31-35-6 dir2]$ cat file3.txt
+this is first line in file3
+this line is for practice
+this line gives the count
+[ec2-user@ip-172-31-35-6 dir2]$ tac file3.txt
+this line gives the count
+this line is for practice
+this is first line in file3
+
+##18. What command is used to show how long it's been since the server was rebooted?
+[ec2-user@ip-172-31-35-6 dir2]$ last reboot
+reboot   system boot  4.14.225-168.357 Mon Mar 29 16:18 - 04:47 (4+12:29)
+wtmp begins Mon Mar 29 16:18:29 2021
+[ec2-user@ip-172-31-35-6 dir2]$ who -b
+         system boot  2021-03-29 16:18
+
+##19. What command is used to change the ownership of a file?
+Chown NewUser Filename
