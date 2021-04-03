@@ -1,0 +1,141 @@
+Basic level 
+
+1. What command is used to get the IP addresses of all interfaces
+on a server?
+
+[ec2-user@ip-172-31-35-6 ~]$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9001
+        inet 172.31.35.6  netmask 255.255.240.0  broadcast 172.31.47.255
+        inet6 fe80::8c9:9bff:fe1b:dce6  prefixlen 64  scopeid 0x20<link>
+        ether 0a:c9:9b:1b:dc:e6  txqueuelen 1000  (Ethernet)
+        RX packets 38894  bytes 56383810 (53.7 MiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 10189  bytes 604328 (590.1 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 8  bytes 648 (648.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 8  bytes 648 (648.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+2. What is the purpose of "mv" command?
+To move files/content of a file from one location to another
+[ec2-user@ip-172-31-35-6 ~]$ mv file1.txt file5.txt
+[ec2-user@ip-172-31-35-6 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  file2.txt  file3.txt  file4.txt  file5.txt  .ssh
+[ec2-user@ip-172-31-35-6 ~]$ cat file5.txt
+hi
+[ec2-user@ip-172-31-35-6 nach]$ mv /home/ec2-user/file2.txt /home/ec2-user/nach/
+[ec2-user@ip-172-31-35-6 nach]$ ls -l
+total 0
+-rw-rw-r-- 1 ec2-user ec2-user 0 Mar 29 17:54 file2.txt
+[ec2-user@ip-172-31-35-6 nach]$ cd ..
+[ec2-user@ip-172-31-35-6 ~]$ ls -l
+total 4
+-rw-rw-r-- 1 ec2-user ec2-user  0 Mar 29 17:54 file3.txt
+-rw-rw-r-- 1 ec2-user ec2-user  0 Mar 29 17:54 file4.txt
+-rw-rw-r-- 1 ec2-user ec2-user  3 Mar 29 17:51 file5.txt
+drwxrwxr-x 2 ec2-user ec2-user 23 Mar 29 18:01 nach
+[ec2-user@ip-172-31-35-6 ~]$ cd nach/
+[ec2-user@ip-172-31-35-6 nach]$ ls -a
+.  ..  file2.txt
+3. Which command is used to create a new empty file?
+[ec2-user@ip-172-31-35-6 ~]$ touch file2.txt
+[ec2-user@ip-172-31-35-6 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  file1.txt  file2.txt  .ssh
+[ec2-user@ip-172-31-35-6 ~]$ touch file3.txt file4.txt
+[ec2-user@ip-172-31-35-6 ~]$ ls -a
+.  ..  .bash_logout  .bash_profile  .bashrc  file1.txt  file2.txt  file3.txt  file4.txt  .ssh
+4. Which command is used to display the contents of a directory?
+ls -l
+5. Which command is used to display all the file names along with
+their types of the current directory?
+ls -a
+6. Which command is used to clear the terminal?
+Clear
+7. What are daemons?
+A daemon (also known as background processes) is a Linux or UNIX program that runs in the background. Almost all daemons have names that end with the letter "d". For example, httpd the daemon that handles the Apache server, or, sshd which handles SSH remote access connections. Linux often start daemons at boot time. Shell scripts stored in /etc/init.d directory are used to start and stop daemons.
+8. Which command is used to move to the parent directory?
+cd .. cd – (to move one dir up)
+cd / (to move to root)
+cd ~ (to move to the parent directory of the user)
+9. What does echo command do?
+Echo command prints on the console, we can add content to a file using echo command.
+10.How to display content of a file?
+Cat filename
+11. How to identify which shell you are using?
+[ec2-user@ip-172-31-35-6 ~]$ echo $0
+-bash
+12. How do you check if a particular service is running?
+[ec2-user@ip-172-31-35-6 ~]$ service --status-all
+● cfn-hup.service - SYSV: Runs user-specified actions when a
+   Loaded: loaded (/etc/rc.d/init.d/cfn-hup; bad; vendor preset: disabled)
+   Active: inactive (dead)
+     Docs: man:systemd-sysv-generator(8)
+netconsole module not loaded
+Configured devices:
+lo eth0
+Currently active devices:
+lo eth0
+13.What is the command to run a program with elevated
+permissions?
+[ec2-user@ip-172-31-35-6 ~]$ whoami
+ec2-user
+[ec2-user@ip-172-31-35-6 ~]$ sudo whoami
+Root
+Using sudo [command] gives superuser/root permission
+[ec2-user@ip-172-31-35-6 ~]$ sudo bash
+[root@ip-172-31-35-6 ec2-user]#
+14.Which command is used to display the path of the current
+working directory?
+[root@ip-172-31-35-6 ec2-user]# pwd
+/home/ec2-user
+15. How to delete a directory forcefully?
+[root@ip-172-31-35-6 ec2-user]# pwd
+/home/ec2-user
+[root@ip-172-31-35-6 ec2-user]# ls -l
+total 4
+-rw-rw-r-- 1 ec2-user ec2-user  0 Mar 29 17:54 file3.txt
+-rw-rw-r-- 1 ec2-user ec2-user  0 Mar 29 17:54 file4.txt
+-rw-rw-r-- 1 ec2-user ec2-user  3 Mar 29 17:51 file5.txt
+drwxrwxr-x 2 ec2-user ec2-user 23 Mar 29 18:01 nach
+[root@ip-172-31-35-6 ec2-user]# cd nach/
+[root@ip-172-31-35-6 nach]# ls -l
+total 0
+-rw-rw-r-- 1 ec2-user ec2-user 0 Mar 29 17:54 file2.txt
+[root@ip-172-31-35-6 nach]# cd ..
+[root@ip-172-31-35-6 ec2-user]# clear
+[root@ip-172-31-35-6 ec2-user]# pwd
+/home/ec2-user
+[root@ip-172-31-35-6 ec2-user]# rm -rf /home/ec2-user/nach
+[root@ip-172-31-35-6 ec2-user]# ls -l
+total 4
+-rw-rw-r-- 1 ec2-user ec2-user 0 Mar 29 17:54 file3.txt
+-rw-rw-r-- 1 ec2-user ec2-user 0 Mar 29 17:54 file4.txt
+-rw-rw-r-- 1 ec2-user ec2-user 3 Mar 29 17:51 file5.txt
+16.Which command is used to switch from superuser to normal
+user?
+[root@ip-172-31-35-6 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-35-6 ~]$
+
+17. How to switch to superuser (root) with elevated permissions?
+
+[ec2-user@ip-172-31-35-6 ~]$ su root
+Password:
+su: Authentication failure
+
+18.How to determine the type of a file?
+[ec2-user@ip-172-31-35-6 ~]$ file file3.txt
+file3.txt: empty
+[ec2-user@ip-172-31-35-6 ~]$ file -b file3.txt
+empty
+[ec2-user@ip-172-31-35-6 ~]$ file -b .ssh
+directory
+[ec2-user@ip-172-31-35-6 ~]$ file -b file4.txt
+empty
+[ec2-user@ip-172-31-35-6 ~]$ file -b file5.txt
+ASCII text
