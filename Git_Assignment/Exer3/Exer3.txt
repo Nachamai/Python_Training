@@ -1,0 +1,51 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ git init Exer3
+Initialized empty Git repository in C:/Users/Nachammai/Desktop/Python_Training/Git_Assignment/Exer3/Exer3/.git/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ touch index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ vi index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ git add index.html
+warning: LF will be replaced by CRLF in Git_Assignment/Exer3/index.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.html
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ git commit -m "adding index.html"
+[main 46d3f31] adding index.html
+ 1 file changed, 2 insertions(+)
+ create mode 100644 Git_Assignment/Exer3/index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ touch about.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ vi about.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ cat about.html
+this is exer3 about.html
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ git commit --amend -m "adding index.html and about.html"
+[main cb2ecfe] adding index.html and about.html
+ Date: Tue Apr 6 10:24:25 2021 -0500
+ 1 file changed, 2 insertions(+)
+ create mode 100644 Git_Assignment/Exer3/index.html
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer3 (main)
+$ git log --oneline
+cb2ecfe (HEAD -> main) adding index.html and about.html
+7636ac4 File about.html added
