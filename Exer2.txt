@@ -1,0 +1,62 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ git init Exer2
+Initialized empty Git repository in C:/Users/Nachammai/Desktop/Python_Training/Git_Assignment/Exer2/Exer2/.git/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ touch index.html about.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ ls
+Exer2/  about.html  index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ vi index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ vi about.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ cat index.html
+this is exer2 index.html
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ cat about.html
+this is first line in about.html in exer2
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ git add about.html
+warning: LF will be replaced by CRLF in Git_Assignment/Exer2/about.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    ../../Exer1/index.html
+        deleted:    ../../Exer2/about.html
+        deleted:    ../../README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Exer1/
+        Exer2/
+        index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ git commit -m "File about.html added"
+[main 7636ac4] File about.html added
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git_Assignment/Exer2/about.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer2 (main)
+$ git log --oneline
+7636ac4 (HEAD -> main) File about.html added
