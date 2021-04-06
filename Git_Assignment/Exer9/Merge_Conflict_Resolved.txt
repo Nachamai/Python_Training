@@ -1,0 +1,59 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (main)
+$ git pull
+Already up to date.
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (main)
+$ git checkout my-feature1
+Switched to branch 'my-feature1'
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (my-feature1)
+$ git merge
+fatal: No remote for the current branch.
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (my-feature1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (main)
+$ git merge
+Already up to date.
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (main)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer9
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (main)
+$ git checkout my-feature1
+Switched to branch 'my-feature1'
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer9 (my-feature1)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (my-feature1)
+$ git push
+fatal: The current branch my-feature1 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin my-feature1
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (my-feature1)
+$ git push --set-upstream origin my-feature1
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (10/10), 969 bytes | 323.00 KiB/s, done.
+Total 10 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'my-feature1' on GitHub by visiting:
+remote:      https://github.com/Nachamai/Python_Training/pull/new/my-feature1
+remote:
+To https://github.com/Nachamai/Python_Training.git
+ * [new branch]      my-feature1 -> my-feature1
+Branch 'my-feature1' set up to track remote branch 'my-feature1' from 'origin'.
+
