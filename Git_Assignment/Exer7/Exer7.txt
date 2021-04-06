@@ -1,0 +1,66 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ mkdir Exer7
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer7
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ ls
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ touch file1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ vi file1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ vi file2
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ git add .
+warning: LF will be replaced by CRLF in Git_Assignment/Exer7/file1.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Git_Assignment/Exer7/file2.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ git commit -m "file1 and file2 added"
+[main 2d5cab9] file1 and file2 added
+ 3 files changed, 4 insertions(+)
+ create mode 100644 Git_Assignment/Exer6/file5
+ create mode 100644 Git_Assignment/Exer7/file1
+ create mode 100644 Git_Assignment/Exer7/file2
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ git log --oneline
+85bcfe2 (HEAD -> main) added file3
+2d5cab9 file1 and file2 added
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ ls
+file1  file2  file3
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ git reset --hard 2d5cab9
+HEAD is now at 2d5cab9 file1 and file2 added
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ ls
+file1  file2
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer7 (main)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 3 and 7 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../Exer1/
+        ../Exer2/Exer2/
+        ../Exer2/index.html
+        ../Exer3/Exer3/
+        ../Exer3/about.html
+        ../Exer4/Exer4/
+        ../Exer6/Exer6/
+
+nothing added to commit but untracked files present (use "git add" to track)
