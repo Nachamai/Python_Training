@@ -1,0 +1,34 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (my-feature1)
+$ cd Exer5
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ ls
+Exer5.txt
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ vi file1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ git add .
+warning: LF will be replaced by CRLF in Git_Assignment/Exer5/file1.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ git commit -m "adding file1 Exer5"
+[my-feature1 1a1d73c] adding file1 Exer5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git_Assignment/Exer5/file1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ vi file1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ git stash save "checking how stash works"
+warning: LF will be replaced by CRLF in Git_Assignment/Exer5/file1.
+The file will have its original line endings in your working directory
+Saved working directory and index state On my-feature1: checking how stash works
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer5 (my-feature1)
+$ cat file1
+first line Exer5
+
