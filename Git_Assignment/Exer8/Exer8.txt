@@ -1,0 +1,289 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git branch my-feature
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ vi about-us.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git add about-us.html
+warning: LF will be replaced by CRLF in Git_Assignment/Exer8/about-us.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git commit -m "added about-us.html"
+[my-feature 197975d] added about-us.html
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git_Assignment/Exer8/about-us.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git branch
+  main
+* my-feature
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 4 and 7 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git pull
+error: The following untracked working tree files would be overwritten by merge:
+        Git_Assignment/Exer1/index.html
+Please move or remove them before you merge.
+Aborting
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ ls
+index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git commit -m "adding Exer1 index.html"
+On branch master
+nothing to commit, working tree clean
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer8
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git pull
+error: The following untracked working tree files would be overwritten by merge:
+        Git_Assignment/Exer1/index.html
+Please move or remove them before you merge.
+Aborting
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ ls
+index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git branch my-feature
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ vi about-us.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git add about-us.html
+warning: LF will be replaced by CRLF in Git_Assignment/Exer8/about-us.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git commit -m "added about-us.html"
+[my-feature 197975d] added about-us.html
+ 1 file changed, 1 insertion(+)
+ create mode 100644 Git_Assignment/Exer8/about-us.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git branch
+  main
+* my-feature
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch and 'origin/main' have diverged,
+and have 4 and 7 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git pull
+error: The following untracked working tree files would be overwritten by merge:
+        Git_Assignment/Exer1/index.html
+Please move or remove them before you merge.
+Aborting
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ ls
+index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git commit -m "adding Exer1 index.html"
+On branch master
+nothing to commit, working tree clean
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer8
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git pull
+error: The following untracked working tree files would be overwritten by merge:
+        Git_Assignment/Exer1/index.html
+Please move or remove them before you merge.
+Aborting
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ ls
+index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ git push
+To https://github.com/Nachamai/Python_Training.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Nachamai/Python_Training.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ ls
+index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ rm -rf index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ ls
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ rm -ef Exer1
+rm: unknown option -- e
+Try 'rm --help' for more information.
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ ls
+Exer1/  Exer2/  Exer3/  Exer4/  Exer5/  Exer6/  Exer7/  Exer8/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer8
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ git pull
+Removing Git_Assignment/Exer5/file3
+Removing Git_Assignment/Exer5/file2
+Removing Git_Assignment/Exer5/file1
+Removing Exer2/about.html
+Removing Exer1/index.html
+Merge made by the 'recursive' strategy.
+ Exer1/index.html                |  1 -
+ Exer2/about.html                |  2 --
+ Git_Assignment/Exer1/index.html |  1 +
+ Git_Assignment/Exer5/Exer5.txt  | 15 +++++++++++++++
+ Git_Assignment/Exer5/file1      |  3 ---
+ Git_Assignment/Exer5/file2      |  2 --
+ Git_Assignment/Exer5/file3      |  2 --
+ 7 files changed, 16 insertions(+), 10 deletions(-)
+ delete mode 100644 Exer1/index.html
+ delete mode 100644 Exer2/about.html
+ create mode 100644 Git_Assignment/Exer1/index.html
+ create mode 100644 Git_Assignment/Exer5/Exer5.txt
+ delete mode 100644 Git_Assignment/Exer5/file1
+ delete mode 100644 Git_Assignment/Exer5/file2
+ delete mode 100644 Git_Assignment/Exer5/file3
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer8 (main)
+$ cd ..
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ ls
+Exer1/  Exer2/  Exer3/  Exer4/  Exer5/  Exer6/  Exer7/  Exer8/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ git push
+Enumerating objects: 32, done.
+Counting objects: 100% (32/32), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (28/28), 2.03 KiB | 415.00 KiB/s, done.
+Total 28 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 2 local objects.
+To https://github.com/Nachamai/Python_Training.git
+   12f4e68..5b59508  main -> main
