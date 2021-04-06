@@ -1,0 +1,56 @@
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training (main)
+$ mkdir Git_Assignment
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training (main)
+$ cd Git_Assignment/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ mkdir Exer1
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ git init Exer1
+Initialized empty Git repository in C:/Users/Nachammai/Desktop/Python_Training/Git_Assignment/Exer1/.git/
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ ls
+Exer1/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment (main)
+$ cd Exer1/
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ touch index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ vi index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git commit -m "Initial message"
+[master (root-commit) 513e5e7] Initial message
+ 1 file changed, 2 insertions(+)
+ create mode 100644 index.html
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git log --oneine
+fatal: unrecognized argument: --oneine
+
+Nachammai@DESKTOP-1ACGMQ4 MINGW64 ~/Desktop/Python_Training/Git_Assignment/Exer1 (master)
+$ git log --oneline
+513e5e7 (HEAD -> master) Initial message
