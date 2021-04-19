@@ -1,0 +1,208 @@
+##1.Write a program to reverse a string.
+Sample input: “1234abcd”
+Expected output: “dcba4321”
+
+#Method1 Using loop
+#Output gets printed in the form of a comma separated list in reverse
+#x = input("Enter a string")
+#length = len(x)
+#reversedstring = []
+#while length > 0:
+#    reversedstring += x [length -1]
+#    length = length - 1
+#print(reversedstring)
+
+#Method2 Using slicing concept
+#Output gets printed in the form of a comma separated list in reverse
+#x = list(input("Enter a string:"))
+#print(x[::-1])
+
+#Method3
+txt = "abcd1234"[::-1]
+print(txt)
+
+##2.Write a function that accepts a string and prints the number of uppercase letters and lowercase
+letters.
+Sample input: “abcSdefPghijQkl”
+Expected Output: No. of Uppercase characters : 3 No. of Lower case Characters : 12
+
+x = input("Enter a string:")
+
+def calculate_uppernlower(x):
+    length = len(x)
+    uppercase = 0
+    lowercase = 0
+    i=0
+    while i < length:
+        if x[i].isupper() is True:
+            uppercase += 1
+        elif x[i].islower() is True:
+            lowercase += 1
+        i += 1
+
+    print("No of Uppercase letters:", uppercase)
+    print("No of lowercase letters:", lowercase)
+
+calculate_uppernlower(x)
+
+##3.Create a function that takes a list and returns a new list with unique elements of the first list.
+
+def unique(list1):
+    unique_list = []
+
+    for x in list1:
+        if x not in unique_list:
+            unique_list.append(x)
+    print(unique_list)
+
+list1 = [3, 4, 5, 6, 3, 4]
+print("the unique values from 1st list is")
+unique(list1)
+
+##4.Write a program that accepts a hyphen-separated sequence of words as input and prints the words
+in a hyphen-separated sequence after sorting them alphabetically.
+
+words = input().split('-')
+words.sort()
+print('-'.join(words))
+
+##5.Write a program that accepts a sequence of lines as input and prints the lines after making all
+characters in the sentence capitalized.
+
+x = input()
+capital = x.upper()
+print(capital)
+
+##6.Define a function that can receive two integral numbers in string form and compute their sum and
+print it in the console.
+
+def func12():
+    x = input().split(',')
+    add = int(x[0]) + int(x[1])
+    print(add)
+
+func12()
+
+##7.Define a function that can accept two strings as input and print the string with the maximum length
+in the console. If two strings have the same length, then the function should print both the strings line
+by line.
+
+def func_str():
+    x = input("Enter two strings separated by a comma:").split(',')
+    x1 = x[0]
+    x2 = x[1]
+    length1 = len(x1)
+    length2 = len(x2)
+    if length1 > length2:
+        print(x1)
+    elif length2 > length1:
+        print(x2)
+    else:
+        print(x1,x2)
+
+func_str()
+
+##8.Define a function which can generate and print a tuple where the values are square of numbers
+between 1 and 20 (both 1 and 20 included).
+
+def code8():
+    l = []
+    for i in range(1,21):
+        sq = i*i
+        l.append(sq)
+    t = tuple(l)
+    print(t)
+
+code8()
+
+##9.Write a function called showNumbers that takes a parameter called limit. It should print all the
+numbers between 0 and limit with a label to identify the even and odd numbers.
+
+def showNumbers(limit):
+    for i in range(limit+1):
+        if i%2 == 0:
+            print({i},"EVEN")
+        else:
+            print({i},"ODD")
+
+showNumbers(10)
+
+##10.Write a program which uses filter() to make a list whose elements are even numbers between 1
+and 20 (both included)
+
+list1 = [23, 42, 53, 44, 65]
+even = lambda x: x % 2 == 0
+list2 = list(filter(even, list1))
+
+print(list2)
+
+##11.Write a program which uses map() and filter() to make a list whose elements are squares of even
+numbers in [1,2,3,4,5,6,7,8,9,10].
+
+l = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+e_num = map(lambda x: x ** 2, filter(lambda x: x % 2 == 0, l))
+
+print(list(e_num))
+
+##12.Write a function to compute 5/0 and use try/except to catch the exceptions.
+
+def exc_err():
+    return 5/0
+
+try:
+   exc_err()
+except ZeroDivisionError:
+   print("division by zero!")
+except:
+    print("Error dividing by zero")
+
+exc_err()
+
+##13.Flatten the list [1,2,3,4,5,6,7] into 1234567 using reduce().
+
+import operator
+from functools import reduce
+
+l = [1, 2, 3, 4, 5, 6, 7, 8]
+
+joinedlist = reduce(lambda x,y:(operator.concat(str(x),str(y))),l)
+
+print(joinedlist)
+
+##14.Write a program in Python to find the values which are not divisible by 3 but are a multiple of 7.
+Make sure to use only higher order functions.
+
+integers = range(0,200)
+result = filter(lambda x: x%7 == 0 and x%3 !=0, integers)
+print(list(result))
+
+##15.Write a program in Python to multiply the elements of a list by itself using a traditional function and pass the function to map() to complete the operation.
+
+def mul(x):
+    return x*x
+
+num = range(1,11)
+ans = map(mul, num)
+print(list(ans))
+
+##16. Give the output of the final code
+
+def foo():
+   try:
+      return 1
+   finally:
+      return 2
+k = foo()
+print(k)
+
+Output: 2
+
+def a():
+   try:
+      f(x, 4)
+   finally:
+      print('after f')
+      print('after f?')
+a()
+
+Output: NameError: name 'f' is not defined
