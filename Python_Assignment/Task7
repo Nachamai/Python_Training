@@ -1,0 +1,162 @@
+##1. Write a program that calculates and prints the value according to the given formula:
+Q= Square root of [(2*C*D)/H]
+Following are the fixed values of C and H:
+C is 50.
+H is 30.
+D is a variable whose values should be input to your program in a comma-separated sequence.
+
+import math
+
+class Sqrt:
+    def __init__(self, d):
+        c = 50
+        h = 30
+        self.d = d
+        self.output = math.sqrt((2 * c * d) / h)
+
+a = input("Enter input var values separated by comma").split(',')
+print(a)
+
+for i in a:
+    b = Sqrt(int(i))
+    print(b.d, b.output)
+
+##2. Define a class named Shape and its subclass Square. The Square class has an init function which
+takes length as argument. Both classes have an area function which can print the area of the shape
+where Shape’s area is 0 by default.
+
+class Shape:
+  def __init__(self, length):
+    self.length = length
+  def area(self):
+    print("Area of shape if its square: ",(self.length*self.length))
+
+class Square(Shape):
+  def __init__(self, length):
+    #self.length = length
+    Shape.__init__(self, length)
+  def area(self):
+    print("Area of square: ",(self.length*self.length))
+
+x = Square(4)
+x.area()
+
+y = Shape(3)
+y.area()
+
+##3. Create a class to find three elements that sum to zero from a set of n real numbers
+Input array: [-25,-10,-7,-3,2,4,8,10]
+Expected output: [[-10,2,8],[-7,-3,10]]
+
+class ZeroSum:
+    def zerosum(self,a):
+        result = []
+        a.sort(reverse=True)
+        print(a)
+        len_a = len(a)
+        if  len_a < 3:
+            return []
+        for i in range(0, len_a):
+            for j in range (i+1, len_a):
+                for k in range(j + 1, len_a):
+                    if a[j] + a[k] == -1 * a[i]:
+                        result.append([a[i], a[j], a[k]])
+        return result
+
+x = [-25,-10,-7,-3,2,4,8,10]
+b = ZeroSum()
+print(b.zerosum(x))
+
+##4. Create a Time class and initialize it with hours and minutes.
+Create a method addTime which should take two Time objects and add them.
+E.g.- (2 hour and 50 min)+(1 hr and 20 min) is (4 hr and 10 min)
+Create another method displayTime which should print the time.
+Also create a method displayMinute which should display the total minutes in the Time.
+E.g.- (1 hr 2 min) should display 62 minute.
+
+class Time(object):
+    def __init__(self,hours,minutes):
+        self.hours =hours
+        self.minutes=minutes
+
+    def convert_to_mins(self):
+        minutes = self.hours * 60 + self.minutes
+        return minutes
+
+def addTime(t1,t2):
+    result = Time(0,0)
+    totmin = t1.convert_to_mins() + t2.convert_to_mins()
+    if (totmin < 60):
+        result.hours = 0
+        result.minutes = totmin
+    else:
+        result.hours = int(totmin/60)
+        result.minutes = totmin%60
+    return result
+
+def displayTime(t1):
+    print(t1.hours," hours", t1.minutes," minutes")
+
+def displayMinute(t1):
+    minutes = t1.hours * 60 + t1.minutes
+    print(minutes, " minutes")
+
+t1 = Time(4,40)
+t2 = Time(5,30)
+displayTime(t1)
+displayTime(t2)
+
+t3 = addTime(t1,t2)
+displayTime(t3)
+
+displayMinute(t1)
+displayMinute(t2)
+displayMinute(t3)
+
+##5. Write a Person class with an instance variable “age” and a constructor that takes an integer as a
+parameter. The constructor must assign the integer value to the age variable after confirming the
+argument passed is not negative; if a negative argument is passed then the constructor should set
+age to 0 and print “Age is not valid, setting age to 0”. In addition, you must write the following instance
+methods:
+yearPasses() should increase age by the integer value that you are passing inside the function.
+amIOld() should perform the following conditional actions:
+If age is between 0 and <13, print “You are young”.
+If age is >=13 and <=19 , print “You are a teenager”.
+Otherwise, print “You are old”.
+
+class Person:
+    age = 0
+    def __init__(self,a):
+        if a < 0:
+            print("Age is not valid, setting age to 0")
+        else:
+            self.age = a
+    def amIOld(self):
+        if self.age < 13:
+            print("You are young")
+        elif self.age >= 13 and self.age < 18:
+            print("You are a teenager")
+        else:
+            print("You are old")
+    def yearPasses(self,n):
+        self.age += n
+
+a = Person(-10)
+b = Person(5)
+c = Person(15)
+d = Person(40)
+
+a.amIOld()
+b.amIOld()
+c.amIOld()
+d.amIOld()
+
+a.yearPasses(5)
+b.yearPasses(5)
+c.yearPasses(5)
+d.yearPasses(5)
+
+a.amIOld()
+b.amIOld()
+c.amIOld()
+d.amIOld()
