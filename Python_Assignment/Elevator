@@ -1,0 +1,58 @@
+import pyttsx3
+
+print("Welcome to the Elevator!!!")
+engine = pyttsx3.init()
+
+engine.setProperty('rate', 125)
+
+voices = engine.getProperty('voices')       #getting details of current voice
+#engine.setProperty('voice', voices[0].id)  #changing index, changes voices. o for male
+engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female
+
+engine.say("Welcome to the Elevator")
+engine.runAndWait()
+
+floormax = 10
+floormin = 1
+floorcur = 1
+
+while(True):
+    engine.say("Current Floor is ")
+    engine.say(str(floorcur))
+    engine.runAndWait()
+    engine.say("To which floor you want to go")
+    engine.runAndWait()
+    floorinput = int(input("Enter the floor number:"))
+    if floorinput < floormin or floorinput > floormax:
+        engine.say("Incorrect Floor number entered. Quitting. This building has a max of ")
+        engine.say(str(floormax))
+        engine.say("floors and there are no basements.")
+        engine.runAndWait()
+        break
+    elif floorinput == floorcur:
+        engine.say("You are already at the floor where you want to go")
+        engine.runAndWait()
+    elif floorinput > floorcur:
+        engine.say("Buckle up. Closing the door.")
+        engine.runAndWait()
+        engine.say("Elevator going up to the floor")
+        engine.say(str(floorinput))
+        engine.runAndWait()
+        engine.say("Elevator at the floor")
+        engine.say(str(floorinput))
+        engine.runAndWait()
+        engine.say("Opening the door. Have a good day.")
+        engine.runAndWait()
+        floorcur = floorinput
+    elif floorinput < floorcur:
+        engine.say("Buckle up. Closing the door.")
+        engine.runAndWait()
+        engine.say("Elevator going down to the floor")
+        engine.say(str(floorinput))
+        engine.runAndWait()
+        engine.say("Elevator at the floor")
+        engine.say(str(floorinput))
+        engine.runAndWait()
+        engine.say("Opening the door. Have a good day.")
+        engine.runAndWait()
+        floorcur = floorinput
